@@ -13,7 +13,7 @@
       position: relative;
       display: flex;
       flex-direction: column; /* Arrange children vertically */
-      height: 100%; /* Ensure full height of the container */
+      height: auto; /* Let content dictate height or set fixed height */
     }
     .game-card .overlay {
       position: absolute;
@@ -31,7 +31,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between; /* Push the button to the bottom */
-      height: 100%; /* Allow content to take full space inside the card */
+      height: auto; /* Allow content to take full space inside the card */
     }
   </style>
 </head>
@@ -43,7 +43,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
       <!-- Example Game Server Card with external image -->
-      <div class="game-card bg-gray-800 p-6 min-h-[250px] rounded-lg shadow-lg hover:shadow-xl transition-shadow" style="background-image: url('https://i.ibb.co/9ZwjNmp/wallpaper-minecraft-java-edition-1920x1080.png');">
+      <div class="game-card bg-gray-800 p-6 h-[300px] rounded-lg shadow-lg hover:shadow-xl transition-shadow" style="background-image: url('https://i.ibb.co/9ZwjNmp/wallpaper-minecraft-java-edition-1920x1080.png');">
         <div class="overlay"></div>
         <div class="game-card-content">
           <h3 class="text-xl font-semibold mb-2 text-gray-100">Minecraft</h3>
@@ -53,7 +53,7 @@
       </div>
 
       <!-- Repeat this block for other games -->
-      <div class="game-card bg-gray-800 p-6 min-h-[350px] rounded-lg shadow-lg hover:shadow-xl transition-shadow" style="background-image: url('https://example.com/images/ark.jpg');">
+      <div class="game-card bg-gray-800 p-6 h-[300px] rounded-lg shadow-lg hover:shadow-xl transition-shadow" style="background-image: url('https://example.com/images/ark.jpg');">
         <div class="overlay"></div>
         <div class="game-card-content">
           <h3 class="text-xl font-semibold mb-2 text-gray-100">ARK: Survival Evolved</h3>
@@ -63,7 +63,7 @@
       </div>
 
       <!-- Additional Games -->
-      <div class="game-card bg-gray-800 p-6 min-h-[350px] rounded-lg shadow-lg hover:shadow-xl transition-shadow" style="background-image: url('https://example.com/images/rust.jpg');">
+      <div class="game-card bg-gray-800 p-6 h-[300px] rounded-lg shadow-lg hover:shadow-xl transition-shadow" style="background-image: url('https://example.com/images/rust.jpg');">
         <div class="overlay"></div>
         <div class="game-card-content">
           <h3 class="text-xl font-semibold mb-2 text-gray-100">Rust</h3>
