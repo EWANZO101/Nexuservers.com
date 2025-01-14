@@ -6,6 +6,27 @@
   <title>Game Servers</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet">
+  <style>
+    .game-card {
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .game-card .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Adjust transparency */
+      border-radius: 0.5rem; /* Optional: to match rounded corners */
+      z-index: 1;
+    }
+    .game-card-content {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
 </head>
 <body class="bg-gray-900 text-gray-300">
 
@@ -14,28 +35,34 @@
     <h2 class="text-3xl font-semibold mb-6 text-center text-gray-100">Available Games</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <!-- Example Game Server Card -->
-      <div class="bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-        <img src="images/minecraft.jpg" alt="Minecraft" class="w-full h-40 object-cover rounded-md mb-4">
-        <h3 class="text-xl font-semibold mb-2 text-gray-100">Minecraft</h3>
-        <p class="text-gray-400 mb-4">Create your world and explore limitless possibilities.</p>
-        <a href="minecraft.html" class="block bg-blue-500 hover:bg-blue-600 text-white text-center py-2 rounded-md">View Plans</a>
+      <!-- Example Game Server Card with external image -->
+      <div class="game-card bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow" style="background-image: url('https://i.ibb.co/9ZwjNmp/wallpaper-minecraft-java-edition-1920x1080.png');">
+        <div class="overlay"></div>
+        <div class="game-card-content">
+          <h3 class="text-xl font-semibold mb-2 text-gray-100">Minecraft</h3>
+          <p class="text-gray-400 mb-4">Create your world and explore limitless possibilities.</p>
+          <a href="minecraft.html" class="block bg-blue-500 hover:bg-blue-600 text-white text-center py-2 rounded-md">View Plans</a>
+        </div>
       </div>
 
-      <!-- Repeat this block for each game -->
-      <div class="bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-        <img src="images/ark.jpg" alt="ARK" class="w-full h-40 object-cover rounded-md mb-4">
-        <h3 class="text-xl font-semibold mb-2 text-gray-100">ARK: Survival Evolved</h3>
-        <p class="text-gray-400 mb-4">Survive in a prehistoric world with dinosaurs.</p>
-        <a href="ark.html" class="block bg-blue-500 hover:bg-blue-600 text-white text-center py-2 rounded-md">View Plans</a>
+      <!-- Repeat this block for other games, using different background images -->
+      <div class="game-card bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow" style="background-image: url('https://example.com/images/ark.jpg');">
+        <div class="overlay"></div>
+        <div class="game-card-content">
+          <h3 class="text-xl font-semibold mb-2 text-gray-100">ARK: Survival Evolved</h3>
+          <p class="text-gray-400 mb-4">Survive in a prehistoric world with dinosaurs.</p>
+          <a href="ark.html" class="block bg-blue-500 hover:bg-blue-600 text-white text-center py-2 rounded-md">View Plans</a>
+        </div>
       </div>
 
       <!-- Additional Games -->
-      <div class="bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-        <img src="images/rust.jpg" alt="Rust" class="w-full h-40 object-cover rounded-md mb-4">
-        <h3 class="text-xl font-semibold mb-2 text-gray-100">Rust</h3>
-        <p class="text-gray-400 mb-4">Survive and conquer in a harsh, competitive world.</p>
-        <a href="rust.html" class="block bg-blue-500 hover:bg-blue-600 text-white text-center py-2 rounded-md">View Plans</a>
+      <div class="game-card bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow" style="background-image: url('https://example.com/images/rust.jpg');">
+        <div class="overlay"></div>
+        <div class="game-card-content">
+          <h3 class="text-xl font-semibold mb-2 text-gray-100">Rust</h3>
+          <p class="text-gray-400 mb-4">Survive and conquer in a harsh, competitive world.</p>
+          <a href="rust.html" class="block bg-blue-500 hover:bg-blue-600 text-white text-center py-2 rounded-md">View Plans</a>
+        </div>
       </div>
 
     </div>
